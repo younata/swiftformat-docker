@@ -1,10 +1,7 @@
 FROM swift:slim
 
-ADD swiftformat_linux.zip /opt/lib/swiftformat_linux.zip
-WORKDIR /opt/lib
+ADD swiftformat_linux /bin/swiftformat
 
-RUN unzip /opt/lib/swiftformat_linux.zip && \
-    mv /opt/lib/swiftformat_linux /bin/swiftformat && \
-    chmod 755 /bin/swiftformat
+RUN chmod 755 /bin/swiftformat
 
 ENTRYPOINT ["/bin/swiftformat"]
