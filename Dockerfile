@@ -1,4 +1,4 @@
-FROM swift:slim
+FROM swift:latest
 
 ADD . /opt/lib
 WORKDIR /opt/lib
