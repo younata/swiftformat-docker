@@ -1,6 +1,6 @@
 FROM swift:slim
 
-ADD swiftformat_linux.zip /opt/lib
+ADD swiftformat_linux.zip /opt/lib/swiftformat_linux.zip
 WORKDIR /opt/lib
 
 RUN unzip /opt/lib/swiftformat_linux.zip && \
