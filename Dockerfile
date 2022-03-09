@@ -1,10 +1,10 @@
 FROM swift:latest
 
-ADD . /opt/lib
+ADD SwiftFormat /opt/lib/
 WORKDIR /opt/lib
 
 RUN swift build -c release && \
-    cp `swift build --show-bin-path` /bin/swiftformat
+    cp "`swift build -c release --show-bin-path`"/swiftformat /bin/swiftformat
 
 RUN chmod 755 /bin/swiftformat
 
